@@ -1,16 +1,17 @@
-Up x4c
-Down x4d
-Right x4e
-Left x4f
-. x??
-/ x??
-S x21
-W x11
-D x22
-A x20
-F x23
-R x13
-H x25
-Space xbar x40
-O x18
-Escape x45
+Key Hex Key#
+Up x4C (273)
+Down x4D (274)
+Right x4E (275)
+Left x4F (276)
+. x39 (46)
+/ x3A (47)
+S x21 (115)
+W x11 (119)
+D x22 (100)
+A x20 (97)
+F x23 (102)
+R x13 (114) 
+H x25 (104)
+Space xbar x40 (32)
+O x18 (111)
+Escape x45 (27)
