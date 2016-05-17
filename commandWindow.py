@@ -43,7 +43,13 @@ def setBackgorundColor(colorTuple):
 	screen.fill(colorTuple)
 	pygame.display.update()
 
-#################################  Keyboard ################################
+
+#########################Setting up the socket ###########################
+
+
+
+
+#################################  Gettting Keyboard state ################################
 
 #gets the currently pressed keys and sends them over the socket
 def sendKeyboard():
@@ -53,25 +59,22 @@ def sendKeyboard():
 #Waits for a keyboard event, determines which keys are pressed after each keyboard event,
 #returns the list of currently pressed keys
 def getNextKeys():
-	if pygame.key.get_focused:
-		print('test')
-		setBackgorundColor(activeColor)
-		displayIntructionText()
-		#TODO: add formatting
-		#socket.send(getCurrentKeys())
-	else:
-		setBackgorundColor(inactiveColor)
-		displayText("Window inactive", 10)
+	return getCurrentKeys()
+
+def sendKeys(keys):
+	socket.send(keys)
 
 def getCurrentKeys():
 	pygameEvent = pygame.event.wait()
-	if pygameEvent.event.EventType == "KEYDOWN" or pygameEvent.event.EventType == "KEYUP":
-		return pygame.key.getPressed()
+	if pygameEvent.event.event_name() == "KEYDOWN":
+		return pygame.key.getPressed();
 
 
 ############### Main program ####################################
 
 initializeWindow()
 #initializeSocket()
-#sendKeyboard()
+while(True):
+#	sendKeyboard()
+	print pygame.event.wait()
 
