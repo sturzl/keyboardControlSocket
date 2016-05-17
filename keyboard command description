@@ -1,0 +1,19 @@
+Up: speed up forward 
+Down: slow down backwards
+Right: Clockwise
+Left: Counterclockwise
+.: Put in turning configuration
+/: Put in driving configuration
+
+S: "deploy arm"
+W: "stow arm"
+D: translate BC out
+A: translate BC in
+F: rotate bucket foreward
+R: rotate buckets backwards
+
+H: turn hopper motor
+
+Space bar: stops drive motor
+O: override
+Escape: stop all motors

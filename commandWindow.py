@@ -65,13 +65,13 @@ def getNextKeys():
 
 def getCurrentKeys():
 	pygameEvent = pygame.event.wait()
-	if pygameEvent.event.EventType = "KEYDOWN" or pygameEvent.event.EventType = "KEYUP":
+	if pygameEvent.event.EventType == "KEYDOWN" or pygameEvent.event.EventType == "KEYUP":
 		return pygame.key.getPressed()
 
 
 ############### Main program ####################################
 
-#initializeWindow()
+initializeWindow()
 #initializeSocket()
 #sendKeyboard()
 
