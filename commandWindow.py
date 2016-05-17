@@ -1,6 +1,5 @@
 #import socket
 import sys, pygame
-import time
 
 #constants
 windowSize = width, height = 800, 600
@@ -48,13 +47,17 @@ def setBackgorundColor(colorTuple):
 
 
 
-
 #################################  Gettting Keyboard state ################################
 
 #gets the currently pressed keys and sends them over the socket
-def sendKeyboard():
-	currentlyPressedKeys = getNextKeys()
-	sendKeys(currentlyPressedKeys);
+def sendKeyPresses():
+	quit = False
+	keysPressed= []
+	while(True and (quit == False)):
+		nextEvent = str(pygame.event.wait())
+		if('KeyDown' in nextEvent):
+			#socket.send(lastEvent.split(', ')[1].split(' ')[1])
+			print nextEvent.split(', ')[1].split(' ')[1]
 
 #Waits for a keyboard event, determines which keys are pressed after each keyboard event,
 #returns the list of currently pressed keys
@@ -74,7 +77,9 @@ def getCurrentKeys():
 
 initializeWindow()
 #initializeSocket()
-while(True):
-#	sendKeyboard()
-	print pygame.event.wait()
+sendKeyPresses()
+
+
+
+
 
