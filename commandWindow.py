@@ -4,7 +4,7 @@ import sys, pygame
 #constants
 windowSize = width, height = 800, 600
 #displayed in the window t ogive directiosn to the driver
-instructionTextLines =  ('window must be active ("on top") for commands to work','space bar is stop')
+instructionTextLines =  open('commands.txt').readlines()
 activeColor = (0,175,0)
 inactiveColor = (255,0,0)
 textColor = (0,0,0)
@@ -57,7 +57,11 @@ def sendKeyPresses():
 		nextEvent = str(pygame.event.wait())
 		if('KeyDown' in nextEvent):
 			#socket.send(lastEvent.split(', ')[1].split(' ')[1])
-			print nextEvent.split(', ')[1].split(' ')[1]
+			key = nextEvent.split(', ')[1].split(' ')[1]
+			print key
+			if(key == '27'):
+				quit = True
+				pygame.quit()
 
 #Waits for a keyboard event, determines which keys are pressed after each keyboard event,
 #returns the list of currently pressed keys
