@@ -1,17 +1,17 @@
-Key Hex Key#
-Up x4C (273)
-Down x4D (274)
-Right x4E (275)
-Left x4F (276)
-. x39 (46)
-/ x3A (47)
-S x21 (115)
-W x11 (119)
-D x22 (100)
-A x20 (97)
-F x23 (102)
-R x13 (114) 
-H x25 (104)
-Space xbar x40 (32)
-O x18 (111)
-Escape x45 (27)
+Key 	Hex		Decimal	Key#
+Up		4C		76		273
+Down	4D		77		274
+Right	4E		78		275
+Left	4F		79		276
+.		39		57		46
+/		3A		58		47
+S		21		33		115
+W		11		17		119
+D		22		34		100
+A		20		32		97
+F		23		35		102
+R		13		19		114
+H		25		37		104
+Space	40		64		32
+O		18		24		111
+Escape	45		69		27
